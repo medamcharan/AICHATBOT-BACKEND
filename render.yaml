@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aiserver
+    env: node
+    plan: free
+    branch: master
+    buildCommand: ""
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
