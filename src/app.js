@@ -7,7 +7,12 @@ const chatRoutes = require('./routes/chatRoutes'); // Import the chat routes
 const app = express();
 
 // Middlewares
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://earnest-longma-cbb832.netlify.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Set up routes
